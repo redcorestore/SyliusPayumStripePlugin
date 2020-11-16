@@ -11,9 +11,9 @@
         }
     ],
     "require": {
-        "php": "^7.3",
-        "flux-se/payum-stripe-bundle": "^1.2",
-        "sylius/sylius": "^1.5"
+        "php": "^7.2",
+        "flux-se/payum-stripe-bundle": "dev-sylius1.2_downgrade",
+        "sylius/sylius": "^1.2"
     },
     "require-dev": {
         "ext-json": "*",
@@ -38,11 +38,11 @@
         "phpunit/phpunit": "^8|^9",
         "sensiolabs/security-checker": "^6.0",
         "sylius-labs/coding-standard": "^3.2",
-        "symfony/browser-kit": "^4.4",
-        "symfony/debug-bundle": "^4.4",
-        "symfony/dotenv": "^4.4",
-        "symfony/intl": "^4.4",
-        "symfony/web-profiler-bundle": "^4.4",
+        "symfony/browser-kit": "^3.4|^4.4",
+        "symfony/debug-bundle": "^3.4|^4.4",
+        "symfony/dotenv": "^3.4|^4.4",
+        "symfony/intl": "^3.4|^4.4",
+        "symfony/web-profiler-bundle": "^3.4|^4.4",
         "vimeo/psalm": "3.11.4"
     },
     "prefer-stable": true,
