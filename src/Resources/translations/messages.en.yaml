@@ -4,4 +4,15 @@ flux_se_sylius_payum_stripe_plugin:
     form:
         gateway_configuration:
             stripe:
+                payment_method_type: Payment method type
+                payment_method_types:
+                    card: Card
+                    bancontact: Bancontact
+                    blik: BLIK
+                    eps: EPS
+                    fpx: FPX
+                    giropay: Giropay
+                    ideal: iDEAL
+                    przelewy24: Przelewy24
+                    sofort: Sofort
                 webhook_secret_keys: Webhook secret keys
