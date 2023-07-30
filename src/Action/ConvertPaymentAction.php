@@ -38,7 +38,7 @@ final class ConvertPaymentAction implements ActionInterface
         $order = $payment->getOrder();
 
         $details = $this->detailsProvider->getDetails($order);
-        $details['payment_method_types'] = $this->getPaymentMethodTypes();
+        $details['payment_method_types'] = $this->getPaymentMethodTypes($payment);
 
         $request->setResult($details);
     }
@@ -51,7 +51,7 @@ final class ConvertPaymentAction implements ActionInterface
         $gatewayConfig = $method->getGatewayConfig();
         Assert::notNull($gatewayConfig);
 
-        $paymentMethodTypes = $gatewayConfig->getConfig['payment_method_types'];
+        $paymentMethodTypes = array_values($gatewayConfig->getConfig()['payment_method_types'] ?? []);
         if (empty($paymentMethodTypes)) {
             $paymentMethodTypes = [PaymentMethodTypes::PAYMENT_METHOD_TYPE_CARD];
         }
